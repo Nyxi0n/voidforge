@@ -1,0 +1,12 @@
+#+TITLE: Nyx ツ VoidForge
+#+AUTHOR: Nyx ツ ([[https://gitlab.com/Nyxion][GitLab]] / [[https://github.com/Nyxi0n][GitHub]])
+#+DATE: <2025-07-30>
+#+LANGUAGE: en
+#+OPTIONS: toc:nil num:nil
+#+DESCRIPTION: The VoidForge — A modular dotfile & lair configuration forge using Stow.
+#+PROPERTY: header-args :results output :exports both
+
+,#+BEGIN_CENTER
+*━━━ ⬤  VOIDFORGE  ⬤ ━━━*
+*Modular Dotfiles · Hyprland · Zsh · Glyphs*
+,#+END_CENTER
