@@ -57,6 +57,10 @@ flycheck_*.el
 # Zsh Secrets
 
 .config/zsh/*secret*.zsh
+.config/zsh/25-sectet.zsh
+
+# Ignore my secret Zsh shard
+zsh/.config/zsh/*-secret*.zsh
 
 # End of https://www.toptal.com/developers/gitignore/api/dotenv,emacs
 
