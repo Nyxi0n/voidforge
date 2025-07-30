@@ -54,6 +54,9 @@ flycheck_*.el
 # network security
 /network-security.data
 
+# Zsh Secrets
+
+.config/zsh/*secret*.zsh
 
 # End of https://www.toptal.com/developers/gitignore/api/dotenv,emacs
 

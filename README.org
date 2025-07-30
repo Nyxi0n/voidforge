@@ -6,7 +6,7 @@
 #+DESCRIPTION: The VoidForge — A modular dotfile & lair configuration forge using Stow.
 #+PROPERTY: header-args :results output :exports both
 
-,#+BEGIN_CENTER
+#+BEGIN_CENTER
 *━━━ ⬤  VOIDFORGE  ⬤ ━━━*
 *Modular Dotfiles · Hyprland · Zsh · Glyphs*
-,#+END_CENTER
+#+END_CENTER
