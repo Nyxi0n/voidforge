@@ -71,5 +71,9 @@ zsh/.config/zsh/*-secret*.zsh
         vesktop/.config/vesktop/state.json
 
 
+# local share
+
+zsh/.local/share/
+!zsh/.local/share/fonts
 # End of https://www.toptal.com/developers/gitignore/api/dotenv,emacs
 
