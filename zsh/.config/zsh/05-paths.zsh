@@ -30,6 +30,12 @@ fi
 if [[ -d "$HOME/.config/emacs/bin" ]]; then
     PATH="$HOME/.config/emacs/bin:$PATH"
 fi
+# 🌑 Emacs XDG Sanctum
+if [[ -d "$HOME/.config/doom" ]]; then
+    PATH="$HOME/.config/:$PATH"
+fi
+
+
 
 # 🌿 Core XDG Foundations
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"

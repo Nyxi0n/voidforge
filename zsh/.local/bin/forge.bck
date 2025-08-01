@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# 🌑 Nyxion's ObsidianForge Deployment Ritual
+#
+
+DOTFILES_DIR="$HOME/VoidForge"
+BACKUP_BASE="$HOME/ObsidianArchives/ColdStorage"
+TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
+BACKUP_DIR="$BACKUP_BASE/$TIMESTAMP"
+
+echo "🌑 Entering the ObsidianForge..."
+cd "$DOTFILES_DIR" || { echo "❌ Failed to enter $DOTFILES_DIR"; exit 1; }
+
+mkdir -p "$BACKUP_DIR"
+
+for dir in */; do
+    dir=${dir%/}
+
+    # Skip git and docs folders
+    [[ "$dir" =~ ^(\.git|docs|README) ]] && continue
+
+    echo "🔗 Stowing $dir..."
+    if ! stow -v "$dir" 2>/dev/null; then
+        echo "⚠ Conflict detected! Backing up existing configs for $dir..."
+        
+        # Backup both ~/.config/$dir and ~/.$dir if they exist
+        [[ -d "$HOME/.config/$dir" ]] && mv "$HOME/.config/$dir" "$BACKUP_DIR/" 2>/dev/null
+        [[ -e "$HOME/.$dir" ]] && mv "$HOME/.$dir" "$BACKUP_DIR/" 2>/dev/null
+
+        # Attempt to stow again after backup
+        stow -v "$dir" || { echo "❌ Failed to stow $dir"; exit 1; }
+    fi
+done
+
+echo "✨ ObsidianForge deployed successfully!"
+echo "🗄 Backup stored in: $BACKUP_DIR"
+

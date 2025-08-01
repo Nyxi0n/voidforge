@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# uwuplay — start ranger with your UwUPlay config
+ranger $HOME/Media/

@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ "$1" = "python" ]; then
+    echo "Use WorkspaceCreator before installing packages through pip!"
+fi

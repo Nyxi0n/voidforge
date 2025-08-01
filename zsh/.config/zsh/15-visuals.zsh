@@ -2,8 +2,8 @@
 # 🦇 Enshrine your shell in rose-pine hues and spectral effects…
 
 # 🌑 Truecolor & kitty communion
-export TERM="kitty"
-#export COLORTERM="truecolor"
+#export TERM="kitty"
+export COLORTERM="truecolor"
 
 # 🕸️ Rose-Pine palette via base16-shell (if installed)
 if [[ -r "${HOME}/.config/base16-shell/scripts/base16-rose-pine.sh" ]]; then
@@ -13,17 +13,6 @@ fi
 # 🖤 LS_COLORS from your custom dircolors file (rose-pine edition)
 [[ -f "${HOME}/.config/dircolors/rose-pine" ]] && eval "$(dircolors "${HOME}/.config/dircolors/rose-pine")"
 
-: '
-
-# 🦇 Cursor & selection specters
-zle_highlight=(  
-  # Standout current line  
-  region:underline  
-  # Dim inactive text  
-  default:standout  
-) 
-
-'
 
 # 🌑 GREP & LESS in spectral style  
 export GREP_COLOR='01;38;5;108'  

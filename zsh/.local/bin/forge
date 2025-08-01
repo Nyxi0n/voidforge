@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+#
+# 🕯️ Nyxion's ObsidianForge Deployment Ritual (Restow Edition, Optimized) 🕯️
+#
+
+set -euo pipefail
+shopt -s nullglob
+
+# Configuration
+DOTFILES_DIR="$HOME/VoidForge"
+BACKUP_BASE="$HOME/ObsidianArchives/ColdStorage"
+TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
+BACKUP_DIR="$BACKUP_BASE/$TIMESTAMP"
+
+# Dry-run support
+DRY_RUN=false
+if [[ "${1:-}" == "--dry-run" ]]; then
+  DRY_RUN=true
+  STOW_OPTS="--restow --verbose --no --stow"
+else
+  STOW_OPTS="--restow --verbose"
+fi
+
+log() { printf "🌑 %s\n" "$*"; }
+
+backup_and_restow() {
+  local module=$1
+
+  log "🔗 Restowing $module..."
+  if ! stow $STOW_OPTS "$module" 2>/dev/null; then
+    log "⚠ Conflict in $module—backing up existing configs..."
+    [[ -d "$HOME/.config/$module" ]] && mv "$HOME/.config/$module" "$BACKUP_DIR/"
+    [[ -e "$HOME/.$module"         ]] && mv "$HOME/.$module"         "$BACKUP_DIR/"
+    log "🔄 Retrying restow for $module..."
+    stow --restow --verbose "$module"
+  fi
+}
+
+# Begin ritual
+log "Entering the ObsidianForge..."
+cd "$DOTFILES_DIR"
+
+mkdir -p "$BACKUP_DIR"
+
+for dir_path in */; do
+  module=${dir_path%/}
+  [[ "$module" =~ ^(\.git|docs|README)$ ]] && continue
+  backup_and_restow "$module"
+done
+
+if ! $DRY_RUN; then
+  log "✨ ObsidianForge restowed successfully!"
+  log "🗄 Backup stored in: $BACKUP_DIR"
+else
+  log "🌀 Dry run complete—no changes were made."
+fi
+
+

@@ -20,7 +20,7 @@ export EMACSDIR="$HOME/.config/emacs"
 
 # 🦇 Ghostly terminal hues
 #export TERM="kitty"
-# export TERM="xterm-ghostty"    # Uncomment to summon the ghostly xterm
+export TERM="xterm-ghostty"    # Uncomment to summon the ghostly xterm
 
 # 🌿 Gentle history: ignore trivial echoes
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|shutdown)"

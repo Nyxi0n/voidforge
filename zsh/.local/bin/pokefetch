@@ -1,0 +1,35 @@
+#!/usr/bin/env zsh
+# pokefetch — random cute Pokémon from predefined list piped into fastfetch 🌟
+
+# Custom Pokemon list
+POKEMON_LIST=(vaporeon jolteon flareon espeon umbreon leafeon glaceon \
+              sylveon mewtwo pikachu chimchar pansear riolu lucario)
+
+shiny_chance=25            # percentage (1–100)
+
+
+# 🎲 Pick one at random
+pokemon=${POKEMON_LIST[RANDOM % ${#POKEMON_LIST[@]} + 1]}
+
+
+# Roll a number from 1–100
+roll=$(( RANDOM % 100 + 1 ))
+
+if (( roll <= shiny_chance )); then
+    shiny_flag="--shiny"
+else
+    shiny_flag=""
+fi
+
+
+# 🖼️ Generate & pipe into fastfetch
+pokemon-colorscripts-go \
+  --no-title \
+  $shiny_flag \
+  -n "$pokemon" \
+| fastfetch \
+    --config ~/.config/fastfetch/config-pokemon.jsonc \
+    --logo-type file-raw \
+    --logo-height 10 \
+    --logo-width 5 \
+    --logo -

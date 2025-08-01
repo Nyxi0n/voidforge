@@ -1,0 +1,146 @@
+#  _   _
+# | \ | |_   ___  __ Nyxion (Nyx ツ)
+# |  \| | | | \ \/ / https://www.youtube.com/@Nyxionツ
+# | |\  | |_| |>  <  Nyxion@Gitlab
+# |_| \_|\__, /_/\_\ Nyxi0n@Github
+#        |___/
+#
+# ☯️ 𝓒𝓮𝓵𝓮𝓼𝓽𝓲𝓪𝓵 𝓨𝓲𝓷𝓨𝓪𝓷𝓰 𝓩𝓮𝓷 🌌
+# “In the hush between star pulses, drift gently through galaxies of ideas.” uwu
+# 🌟 1. Close your eyes to the void…     (｡◕‿◕｡)
+# 🌟 2. Inhale cosmic calm—             🌬️✨
+# 🌟 3. Exhale code like stardust—      ✨🌟
+# # Remain serene, remain radiant, and let your creativity balance like Yin & Yang! ☯️
+#######################################################################################
+
+
+# === Fonts & Text ===
+
+#font-size = 14
+#font-family = JetBrainsMono Nerd Font Mono
+#font-family-bold = JetBrainsMono NFM Bold
+#font-family-bold-italic = JetBrainsMono NFM Bold Italic
+#font-family-italic = JetBrainsMono NFM Italic
+
+
+#font-family = Maple Mono NF
+
+font-size = 14
+font-family = Maple Mono NF Medium
+font-family-bold = Maple Mono NF SemiBold
+font-family-italic = Maple Mono NF Italic
+font-family-bold-italic = Maple Mono NF SemiBold Italic
+
+
+# === Theme & UI ===
+theme = dark:rose-pine,light:rose-pine-dawn
+adjust-cell-height = 10%
+window-theme = dark
+window-height = 32
+window-width = 110
+background-opacity = 0.99
+background-blur-radius = 60
+selection-background = #2d3f76
+selection-foreground = #c8d3f5
+cursor-style = bar
+mouse-hide-while-typing = true
+
+
+# Some shaders can be found in this repo, they're usually uploaded to discord
+# https://github.com/hackrmomo/ghostty-shaders
+# custom-shader = shaders/animated-gradient-shader.glsl
+# custom-shader = shaders/bettercrt.glsl
+# custom-shader = shaders/bloom.glsl
+# custom-shader = shaders/bloom1.glsl
+# custom-shader = shaders/bloom075.glsl
+# custom-shader = shaders/bloom060.glsl
+# custom-shader = shaders/bloom050.glsl
+custom-shader = shaders/bloom025.glsl
+# custom-shader = shaders/bloom050.glsl
+# custom-shader = shaders/bloom060.glsl
+# custom-shader = shaders/bloom075.glsl
+# custom-shader = shaders/bloom1.glsl
+# custom-shader = shaders/crt.glsl
+# custom-shader = shaders/cubes.glsl
+# custom-shader = shaders/dither.glsl
+# custom-shader = shaders/drunkard.glsl
+# custom-shader = shaders/fireworks-rockets.glsl
+# custom-shader = shaders/fireworks.glsl
+# custom-shader = shaders/gears-and-belts.glsl
+# custom-shader = shaders/glitchy.glsl
+# custom-shader = shaders/glow-rgbsplit-twitchy.glsl
+# custom-shader = shaders/gradient-background.glsl
+# custom-shader = shaders/inside-the-matrix.glsl
+# custom-shader = shaders/just-snow.glsl
+# custom-shader = shaders/matrix-hallway.glsl
+# custom-shader = shaders/negative.glsl
+# custom-shader = shaders/retro-terminal.glsl
+# custom-shader = shaders/smoke-and-ghost.glsl
+# custom-shader = shaders/sparks-from-fire.glsl
+# custom-shader = shaders/spotlight.glsl
+# custom-shader = shaders/starfield-colors.glsl
+# custom-shader = shaders/starfield.glsl
+# custom-shader = shaders/tft.glsl
+# custom-shader = shaders/underwater.glsl
+# custom-shader = shaders/water.glsl
+# custom-shader = shaders/cursor_blaze.glsl
+# custom-shader = shaders/cursor_blaze_no_trail.glsl
+# custom-shader = shaders/cursor_smear.glsl
+# custom-shader = shaders/cursor_smear_fade.glsl
+
+# keybindings
+keybind = alt+s>r=reload_config
+keybind = alt+s>x=close_surface
+
+keybind = alt+s>n=new_window
+
+# tabs
+keybind = alt+s>c=new_tab
+keybind = alt+s>shift+l=next_tab
+keybind = alt+s>shift+h=previous_tab
+keybind = alt+s>comma=move_tab:-1
+keybind = alt+s>period=move_tab:1
+
+# quick tab switch
+keybind = alt+s>1=goto_tab:1
+keybind = alt+s>2=goto_tab:2
+keybind = alt+s>3=goto_tab:3
+keybind = alt+s>4=goto_tab:4
+keybind = alt+s>5=goto_tab:5
+keybind = alt+s>6=goto_tab:6
+keybind = alt+s>7=goto_tab:7
+keybind = alt+s>8=goto_tab:8
+keybind = alt+s>9=goto_tab:9
+
+# split
+keybind = alt+s>v=new_split:right
+keybind = alt+s>s=new_split:down
+
+keybind = alt+s>j=goto_split:bottom
+keybind = alt+s>k=goto_split:top
+keybind = alt+s>h=goto_split:left
+keybind = alt+s>l=goto_split:right
+
+keybind = alt+s>z=toggle_split_zoom
+
+# titlebar
+keybind = alt+ctrl+y=toggle_window_decorations
+keybind = ctrl+shift+y=toggle_window_decorations
+
+# Copy Paste
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = performable:ctrl+v=paste_from_clipboard
+
+
+
+
+title = "NyxOS-GhosTTY"
+
+wait-after-command = false
+shell-integration = detect
+window-save-state = always
+gtk-single-instance = true
+unfocused-split-opacity = 0.5
+quick-terminal-position = center
+shell-integration-features = cursor,sudo
+#working-directory = home

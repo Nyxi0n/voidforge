@@ -62,5 +62,14 @@ flycheck_*.el
 # Ignore my secret Zsh shard
 zsh/.config/zsh/*-secret*.zsh
 
+# Vesktop
+	vesktop/.config/vesktop/Crashpad/
+        vesktop/.config/vesktop/SingletonCookie
+        vesktop/.config/vesktop/SingletonLock
+        vesktop/.config/vesktop/SingletonSocket
+        vesktop/.config/vesktop/sessionData/
+        vesktop/.config/vesktop/state.json
+
+
 # End of https://www.toptal.com/developers/gitignore/api/dotenv,emacs
 
