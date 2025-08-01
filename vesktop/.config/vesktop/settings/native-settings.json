@@ -1,0 +1,17 @@
+{
+    "plugins": {},
+    "customCspRules": {
+        "pangrampangram.com": [
+            "connect-src",
+            "img-src",
+            "style-src",
+            "font-src"
+        ],
+        "example.com": [
+            "connect-src",
+            "img-src",
+            "style-src",
+            "font-src"
+        ]
+    }
+}
