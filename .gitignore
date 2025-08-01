@@ -73,7 +73,11 @@ zsh/.config/zsh/*-secret*.zsh
 
 # local share
 
-zsh/.local/share/
-!zsh/.local/share/fonts
+# Ignore all in zsh/.local/share
+zsh/.local/share/*
+
+# But never ignore the fonts directory or its contents
+!zsh/.local/share/fonts/
+!zsh/.local/share/fonts/**
 # End of https://www.toptal.com/developers/gitignore/api/dotenv,emacs
 
